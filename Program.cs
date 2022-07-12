@@ -75,6 +75,13 @@ namespace DSA
             //var result = CountTheTriplets.CountTriplet(arr, n);
             //Console.WriteLine(result);
 
+            //int n = 5;
+            //int[] arr = { 1, 2, 3, 5 };
+            ////Output: 4
+            //var result = MissingNumberInArray.MissingNumber(arr);
+            //Console.WriteLine(result);
+
+
             //int[] arr1 = { 10, 12 };
             //int[] arr2 = { 12, 18, 20 };
             ////arr1[] = [0 1 2 3]

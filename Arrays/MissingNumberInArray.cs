@@ -30,25 +30,27 @@ namespace DSA
     //Expected Auxiliary Space: O(1)
     public static class MissingNumberInArray
     {
-        //Input:
-        //N = 10
-        //A[] = {6,1,2,8,3,4,7,10,5}
-        //Output: 9
         public static int MissingNumber(int[] arr)
         {
+            //Using n sum formula
             //int n = arr.Length;
             //int n_elements_sum = (n + 1) * (n + 2) / 2;
+
+            //Input:
+            //N = 10
+            //A[] = {6,1,2,8,3,4,7,10,5}
+            //Output: 9
 
             int totalSequencialSum = 0;
             int arrSum = 0;
             int i;
             for (i = 1; i <= arr.Length; i++)
             {
-                totalSequencialSum += i;
-                arrSum += arr[i-1];
+                totalSequencialSum = totalSequencialSum + i;
+                arrSum = arrSum + arr[i - 1];
             }
 
-            totalSequencialSum += i;
+            totalSequencialSum = totalSequencialSum + i;
 
             return totalSequencialSum - arrSum;
         }
