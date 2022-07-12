@@ -16,8 +16,7 @@ namespace DSA.Arrays
     //Input:
     //N = 5
     //Arr[] = { 1,2,3,-2,5}
-    //    Output:
-    //9
+    // Output: 9
     //Explanation:
     //Max subarray sum is 9
     //of elements(1, 2, 3, -2, 5) which 
@@ -44,12 +43,16 @@ namespace DSA.Arrays
     {
         public static long MaxSubarraySum(int[] arr)
         {
+            //N = 5
+            //Arr[] = { 1, 2, 3, -2, 5}
+            // Output: 9
+
             int maxSum = arr[0];
             int currentSum = arr[0];
 
-            for (int i = 1; i < arr.Length; i++)
+            for (int i = 1; i < arr.Length - 1; i++)
             {
-                currentSum += arr[i];
+                currentSum = currentSum + arr[i];
 
                 if (currentSum < arr[i])
                 {
@@ -60,9 +63,11 @@ namespace DSA.Arrays
                 {
                     maxSum = currentSum;
                 }
+
             }
 
             return maxSum;
+
         }
     }
 }
