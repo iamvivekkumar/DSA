@@ -107,16 +107,16 @@ namespace DSA
             //CountInversions countInversions = new CountInversions();
             //var inversions = countInversions.InversionCount(arr, n);
 
-            int n = 5, k = 3;
-            int[] arr = { 1, 2, 3, 4, 5 };
-            //Output: 3 2 1 5 4
-            ReverseArrayInGroups.ReverseInGroups(arr, n, k);
-            //Console.WriteLine(ep);
+            //int n = 5, k = 3;
+            //int[] arr = { 1, 2, 3, 4, 5 };
+            ////Output: 3 2 1 5 4
+            //ReverseArrayInGroups.ReverseInGroups(arr, n, k);
+            ////Console.WriteLine(ep);
 
-            foreach (var i in arr)
-            {
-                Console.WriteLine(i);
-            }
+            //foreach (var i in arr)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
 
             Console.WriteLine("Hello World!");

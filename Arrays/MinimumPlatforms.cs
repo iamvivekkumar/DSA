@@ -57,7 +57,7 @@ namespace DSA
 
             while (i < n && j < n)
             {
-                if(arr[i] <= dep[j])
+                if (arr[i] <= dep[j])
                 {
                     plateformNeeded++;
                     i++;
@@ -67,7 +67,7 @@ namespace DSA
                     plateformNeeded--;
                     j++;
                 }
-                if(plateformNeeded> maxPlateform)
+                if (plateformNeeded > maxPlateform)
                 {
                     maxPlateform = plateformNeeded;
                 }

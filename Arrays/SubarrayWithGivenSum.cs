@@ -47,20 +47,26 @@ namespace DSA
     {
         public static List<int> SubarraySum(int[] arr, int n, int s)
         {
+            // Input:  N = 5, S = 12
+            // A[] = { 1, 2, 3, 7, 5 }
+            // Output: 2 4
+
             int startingIndex = 0;
-            int currentSum = 0;    
+            int currentSum = 0;
+
             for (int i = 0; i < n; i++)
             {
                 currentSum = currentSum + arr[i];
 
-                while (currentSum > s && startingIndex <= i)
+                while (currentSum > s && startingIndex < i)
                 {
                     currentSum = currentSum - arr[startingIndex];
                     startingIndex++;
                 }
+
                 if (currentSum == s)
                 {
-                    return new List<int> { startingIndex + 1, i + 1};
+                    return new List<int> { startingIndex + 1, i + 1 };
                 }
             }
 
