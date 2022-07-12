@@ -17,7 +17,7 @@ namespace DSA
     //    Output: 2
     //Explanation: There are 2 triplets: 
     //1 + 2 = 3 and 3 +2 = 5 
-    //â€‹Example 2:
+    //Example 2:
 
     //Input: 
     //N = 3
@@ -32,28 +32,36 @@ namespace DSA
 
     public class CountTheTriplets
     {
-        //Not Solved
         public static int CountTriplet(int[] arr, int n)
         {
             //N = 4
             //arr[] = { 1, 5, 3, 2 }
+            //arrSort = {1, 2, 3, 5}
             //Output: 2
+
             int count = 0;
-            int[] index = new int[100000] ;
+            Array.Sort(arr);
 
-            for (int i = 0; i < n; i++)
+            for (int i = n - 1; i > 1; i--)
             {
-                index[arr[i]] = 1;
-            }
-
-
-            for (int i = 0; i < n - 1; i++)
-            {
-                for (int j = i + 1; j < n; j++)
+                int num = arr[i];
+                int left = 0;
+                int right = i - 1;
+                while (left < right)
                 {
-                    if (index[arr[i] + arr[j]] == 1)
+                    if (num == arr[left] + arr[right])
                     {
                         count++;
+                        left++;
+                        right--;
+                    }
+                    else if (num > arr[left] + arr[right])
+                    {
+                        left++;
+                    }
+                    else
+                    {
+                        right--;
                     }
                 }
             }

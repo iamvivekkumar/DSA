@@ -71,7 +71,7 @@ namespace DSA
             //////
             //int n = 4;
             //int[] arr = { 1, 5, 3, 2 };
-            //Output: 2
+            ////Output: 2
             //var result = CountTheTriplets.CountTriplet(arr, n);
             //Console.WriteLine(result);
 
