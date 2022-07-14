@@ -86,7 +86,7 @@ namespace DSA
             //int[] arr2 = { 12, 18, 20 };
             ////arr1[] = [0 1 2 3]
             ////arr2[] = [5 6 7 8 9]
-            //MergeArraysWithoutExtraSpace.MergeSortedArrays2(arr1, arr2, arr1.Length, arr2.Length);
+            //MergeArraysWithoutExtraSpace.MergeSortedArrays(arr1, arr2, arr1.Length, arr2.Length);
 
 
             //long[] arr = { 1, 2, 3, 4, 5, 6 };

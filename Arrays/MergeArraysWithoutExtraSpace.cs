@@ -55,39 +55,6 @@ namespace DSA
         //        arr2[] = [5 6 7 8 9]
         public static void MergeSortedArrays(int[] arr1, int[] arr2, int n, int m)
         {
-            int i = 0;
-            int j = 0;
-
-            while (i < n && j < m)
-            {
-                if (arr1[i] > arr2[j])
-                {
-                    var temp = arr1[i];
-                    arr1[i] = arr2[j];
-                    arr2[j] = temp;
-
-                    for (int k = j; k < m - 1; k++)
-                    {
-
-                        if (arr2[k] > arr2[k + 1])
-                        {
-                            var temp1 = arr2[k];
-                            arr2[k] = arr2[k + 1];
-                            arr2[k + 1] = temp1;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-                }
-                i++;
-            }
-
-        }
-
-        public static void MergeSortedArrays2(int[] arr1, int[] arr2, int n, int m)
-        {
             int i = n - 1;
             int j = 0;
 
