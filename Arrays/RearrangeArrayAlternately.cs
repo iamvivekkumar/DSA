@@ -44,29 +44,30 @@ namespace DSA
             int i = 0;
             int j = n - 1;
             int k = 0;
-            long[] tempArr = new long[n];
             bool flag = true;
+            long[] tempArr = new long[n];
 
-            while (i < n && j >= 0 && k<n)
+            while (k < n)
             {
                 if (flag)
                 {
                     tempArr[k] = arr[j];
-                    j--; 
+                    j--;
                 }
                 else
                 {
                     tempArr[k] = arr[i];
                     i++;
                 }
-                flag = !flag;
                 k++;
+                flag = !flag;
             }
 
-            for(int l =0; l < n; l++)
+            for (int l = 0; l < n; l++)
             {
                 arr[l] = tempArr[l];
             }
+
         }
     }
 }
