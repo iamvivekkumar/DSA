@@ -69,66 +69,55 @@ namespace DSA
             return arr;
         }
 
-        static public int[] MergeSort(int[] arr, int left, int right)
+        static public void MergeSort(int[] arr, int left, int right)
         {
             if (left < right)
             {
                 int mid = (left + right) / 2;
                 MergeSort(arr, left, mid);
                 MergeSort(arr, mid + 1, right);
-                MergeSortMergeArray(arr, left, mid, right);
+                MergedArray(arr, left, mid, right);
             }
 
-            return arr;
         }
 
-        static public void MergeSortMergeArray(int[] arr, int left, int mid, int right)
+        static public void MergedArray(int[] arr, int left, int mid, int right)
         {
+            int[] tempArr = new int[right + 1];
             int i = left;
             int j = mid + 1;
-            int k = left; //new array index
-
-            int[] newArr = new int[right + 1];
+            int k = left;
 
             while (i <= mid && j <= right)
             {
-                if (arr[i] < arr[j])
+                if (arr[i] > arr[j])
                 {
-                    newArr[k] = arr[i];
-                    i++;
+                    tempArr[k] = arr[j];
+                    j++;
                 }
                 else
                 {
-                    newArr[k] = arr[j];
-                    j++;
+                    tempArr[k] = arr[i];
+                    i++;
                 }
                 k++;
             }
 
-            if (i > mid)
+            while (i <= mid)
             {
-                while (j <= right)
-                {
-                    newArr[k] = arr[j];
-                    j++;
-                    k++;
-                }
+                tempArr[k] = arr[i];
+                i++; k++;
             }
-            else
+            while (j <= right)
             {
-                while (i <= mid)
-                {
-                    newArr[k] = arr[i];
-                    i++;
-                    k++;
-                }
+                tempArr[k] = arr[j];
+                j++; k++;
             }
 
             for (k = left; k <= right; k++)
             {
-                arr[k] = newArr[k];
+                arr[k] = tempArr[k];
             }
-
         }
 
         static public int[] QuickSort(int[] arr, int left, int right)

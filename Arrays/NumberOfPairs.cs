@@ -39,22 +39,9 @@ namespace DSA
     //Expected Auxiliary Space: O(1).
     public class NumberOfPairs
     {
-        //Not Solved
-        public static long CountPairs(int[] X, int[] Y, int n, int m)
-        {
-            long count = 0;
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < m; j++)
-                {
-                    if (Math.Pow(X[i], Y[j]) > Math.Pow(Y[j], X[i]))
-                    {
-                        count++;
-                    }
-                }
-            }
-
-            return count;
-        }
+        //public static long CountPairs(int[] X, int[] Y, int n, int m)
+        //{
+            
+        //}
     }
 }

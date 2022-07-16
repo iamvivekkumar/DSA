@@ -6,7 +6,7 @@ namespace DSA
     {
         static void Main(string[] args)
         {
-            //int[] arr = { 5, 3, 1, 6, 9 };
+            int[] arr = { 5, 3, 1, 6, 9 };
             //int[] sortedArr = { 1, 3, 5, 6, 9 };
             //var bubbleSortedArr = Sort.BubbleSort(arr);
             //foreach(var value in bubbleSortedArr)
@@ -26,11 +26,11 @@ namespace DSA
             //    Console.WriteLine(value);
             //}
 
-            //var mergeSortedArr = Sort.MergeSort(arr, 0, arr.Length - 1);
-            //foreach (var value in mergeSortedArr)
-            //{
-            //    Console.WriteLine(value);
-            //}
+            Sort.MergeSort(arr, 0, arr.Length - 1);
+            foreach (var value in arr)
+            {
+                Console.WriteLine(value);
+            }
 
             //var quickSortedArr = Sort.QuickSort(arr, 0, arr.Length - 1);
             //foreach (var value in quickSortedArr)
