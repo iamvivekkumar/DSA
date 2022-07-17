@@ -42,7 +42,11 @@ namespace DSA
     {
         public static void ReverseInGroups(int[] arr, int n, int k)
         {
-            for(int i = 0; i < n; i = i + k)
+            //N = 5, K = 3
+            //arr[] = { 1, 2, 3, 4, 5 }
+            //Output: 3 2 1 5 4
+
+            for (int i = 0; i < n; i = i + k)
             {
                 int left = i;
                 int right = left + k - 1;
