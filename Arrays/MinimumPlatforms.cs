@@ -49,6 +49,8 @@ namespace DSA
             //Input: n = 6
             //arr[] = { 0900, 0940, 0950, 1100, 1500, 1800 }
             //dep[] = { 0910, 1200, 1120, 1130, 1900, 2000 }
+            // arrSorted[] = { 0900, 0940, 0950, 1100, 1500, 1800 }
+            //depSorted[] =  { 0910, 1120, 1130, 1200, 1900, 2000 }
             //Output: 3
             int plateformNeeded = 0, maxPlateform = 0;
             int i = 0, j = 0;
