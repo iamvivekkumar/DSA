@@ -26,11 +26,11 @@ namespace DSA
             //    Console.WriteLine(value);
             //}
 
-            Sort.MergeSort(arr, 0, arr.Length - 1);
-            foreach (var value in arr)
-            {
-                Console.WriteLine(value);
-            }
+            //Sort.MergeSort(arr, 0, arr.Length - 1);
+            //foreach (var value in arr)
+            //{
+            //    Console.WriteLine(value);
+            //}
 
             //var quickSortedArr = Sort.QuickSort(arr, 0, arr.Length - 1);
             //foreach (var value in quickSortedArr)

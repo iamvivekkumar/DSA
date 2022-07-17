@@ -46,7 +46,7 @@ namespace DSA
         public long InversionCount(long[] arr, long n)
         {
             long[] tempArr = new long[n];
-            long inversions = MergeSort(arr, tempArr, 0, arr.Length-1);
+            long inversions = MergeSort(arr, tempArr, 0, arr.Length - 1);
             return inversions;
         }
 
@@ -61,13 +61,13 @@ namespace DSA
                 inversions += MergeSort(arr, tempArr, left, mid);
                 inversions += MergeSort(arr, tempArr, mid + 1, right);
 
-                inversions += Merge(arr, tempArr, left, mid, right);
+                inversions += MergedArray(arr, tempArr, left, mid, right);
             }
 
             return inversions;
         }
 
-        public long Merge(long[] arr, long[] tempArr, int left, int mid, int right)
+        public long MergedArray(long[] arr, long[] tempArr, int left, int mid, int right)
         {
             int i = left;
             int j = mid + 1;
@@ -91,26 +91,21 @@ namespace DSA
                 k++;
             }
 
-            if (i > mid)
+            while (j <= right)
             {
-                while (j <= right)
-                {
-                    tempArr[k] = arr[j];
-                    j++; k++;
-                }
-            }
-            else
-            {
-                while (i <= mid)
-                {
-                    tempArr[k] = arr[i];
-                    i++; k++;
-                }
+                tempArr[k] = arr[j];
+                j++; k++;
             }
 
-            for (long l = left; l <= right; l++)
+            while (i <= mid)
             {
-                arr[l] = tempArr[l];
+                tempArr[k] = arr[i];
+                i++; k++;
+            }
+
+            for (k = left; k <= right; k++)
+            {
+                arr[k] = tempArr[k];
             }
 
             return inversions;

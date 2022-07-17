@@ -44,11 +44,11 @@ namespace DSA
     {
         public static int GetEquilibriumPoint(int[] arr)
         {
-            // arr = {1,2,5,2,2}
+            //A[] = {1,3,5,2,2}
+            //Output: 3
             int totalSum = 0;
             int leftSum = 0;
             int rightSum = 0;
-            int ep = -1;
 
             if (arr.Length == 1)
             {
@@ -62,7 +62,7 @@ namespace DSA
 
             for (int i = 1; i < arr.Length; i++)
             {
-                leftSum += arr[i - 1];
+                leftSum = leftSum + arr[i - 1];
                 rightSum = totalSum - leftSum - arr[i];
 
                 if (leftSum == rightSum)
@@ -71,7 +71,7 @@ namespace DSA
                 }
             }
 
-            return ep;
+            return -1;
         }
     }
 }
