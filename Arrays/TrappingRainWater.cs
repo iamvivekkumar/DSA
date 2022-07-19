@@ -51,6 +51,10 @@ namespace DSA.Arrays
     {
         public static long TrappingWater(int[] arr, int n)
         {
+
+            // N = 6
+            //arr[] = { 3, 0, 0, 2, 0, 4 }
+            //Output:10
             int[] leftArrMax = new int[n];
             int[] rightArrMax = new int[n];
             long trappedWater = 0;
@@ -68,7 +72,8 @@ namespace DSA.Arrays
                 rightArrMax[i] = Math.Max(rightArrMax[i + 1], arr[i]);
             }
 
-            for (int i = 0; i < n; i++)
+            //for tapped water
+            for (int i = 1; i < n-2; i++)
             {
                 trappedWater += Math.Min(leftArrMax[i], rightArrMax[i]) - arr[i];
             }
