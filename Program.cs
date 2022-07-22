@@ -6,7 +6,11 @@ namespace DSA
     {
         static void Main(string[] args)
         {
-            int[] arr = { 5, 3, 1, 6, 9 };
+            //int[] arr = { 5, 3, 1, 6, 9 };
+            int[] arr = { 9, 9, 9 };
+            var arr1 = PlusOne.GetPlusOne(arr);
+
+
             //int[] sortedArr = { 1, 3, 5, 6, 9 };
             //var bubbleSortedArr = Sort.BubbleSort(arr);
             //foreach(var value in bubbleSortedArr)
