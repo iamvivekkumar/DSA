@@ -23,7 +23,37 @@ namespace DSA.Arrays
 
         public static int[] DoIntersect(int[] nums1, int[] nums2)
         {
-            return null;
+            if (nums1.Length > nums2.Length)
+            {
+                return DoIntersect(nums2, nums1);
+            }
+
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            List<int> list = new List<int>();
+
+            for (int i = 0; i < nums1.Length; i++)
+            {
+                if (dict.ContainsKey(nums1[i]))
+                {
+                    dict[nums1[i]] = dict[nums1[i]] + 1;
+                }
+                else
+                {
+                    dict.Add(nums1[i], 1);
+                }
+            }
+
+            for (int i = 0; i < nums2.Length; i++)
+            {
+                if (dict.ContainsKey(nums2[i]) && dict[nums2[i]] > 0)
+                {
+                    list.Add(nums2[i]);
+                    dict[nums2[i]] = dict[nums2[i]] - 1;
+                }
+            }
+
+            return list.ToArray();
+
         }
     }
 }
