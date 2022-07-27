@@ -28,7 +28,7 @@ namespace DSA
 
     //Expected Time Complexity: O(N)
     //Expected Auxiliary Space: O(1)
-    public static class MissingNumberInArray
+    public static class MissingNumberStartWithOne
     {
         public static int MissingNumber(int[] arr)
         {
