@@ -72,8 +72,7 @@ namespace DSA.Arrays
                 rightArrMax[i] = Math.Max(rightArrMax[i + 1], arr[i]);
             }
 
-            //for tapped water
-            for (int i = 1; i < n-2; i++)
+            for (int i = 1; i < n - 1; i++)
             {
                 trappedWater += Math.Min(leftArrMax[i], rightArrMax[i]) - arr[i];
             }
