@@ -1,12 +1,12 @@
-﻿namespace DSA
+﻿namespace DSA.Search
 {
     static class Search
     {
         public static int LinearSearch(int[] arr, int num)
         {
-            for(int i=0; i< arr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                if(arr[i] == num)
+                if (arr[i] == num)
                 {
                     return i;
                 }
@@ -24,11 +24,11 @@
             {
                 int mid = (left + right) / 2;
 
-                if(mid == num)
+                if (mid == num)
                 {
                     return mid;
                 }
-                else if(arr[mid] < num)
+                else if (arr[mid] < num)
                 {
                     right = mid - 1;
                 }
