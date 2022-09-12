@@ -58,7 +58,7 @@ namespace DSA.Arrays
             }
 
             // we're here because all the digits are nines
-            digits = new int[digits.Length + 1]; // creating new arrar
+            digits = new int[digits.Length + 1]; // creating new array
             digits[0] = 1;
             return digits;
         }
