@@ -166,20 +166,20 @@ class Result
     }
 }
 
-class Solution
-{
-    public static void Main(string[] args)
-    {
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        var aItemsInput = new int[] { 2, 5, 7, 5, 2 };
+//class Solution1
+//{
+//    public static void Main(string[] args)
+//    {
+//        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+//        var aItemsInput = new int[] { 2, 5, 7, 5, 2 };
 
-        foreach (var num in aItemsInput)
-        {
-            singlyLinkedList.InsertElement(num);
-        }
+//        foreach (var num in aItemsInput)
+//        {
+//            singlyLinkedList.InsertElement(num);
+//        }
 
-        int outcome = Result.checkPalindrome(singlyLinkedList);
+//        int outcome = Result.checkPalindrome(singlyLinkedList);
 
-        Console.WriteLine(outcome);
-    }
-}
+//        Console.WriteLine(outcome);
+//    }
+//}

@@ -19,4 +19,30 @@ namespace DSA.LinkedList
         }
 
     }
+
+    public class FlatteningListNode
+    {
+        public int data;
+        public FlatteningListNode next;
+        public FlatteningListNode bottom;
+        public FlatteningListNode(int data = 0, FlatteningListNode next = null, FlatteningListNode bottom = null)
+        {
+            this.data = data;
+            this.next = next;
+            this.bottom = bottom;
+        }
+
+    }
+
+    class MultilevelListNode
+    {
+        public int data;
+        public MultilevelListNode next, child;
+
+        public MultilevelListNode(int d)
+        {
+            data = d;
+            next = child = null;
+        }
+    }
 }
