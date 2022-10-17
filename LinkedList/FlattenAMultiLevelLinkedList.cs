@@ -37,12 +37,12 @@ namespace DSA.LinkedList
             }
 
         }
-        static void Main(string[] args)
-        {
-            var head = CreateList();
-            FlattenList(head);
+        //static void Main(string[] args)
+        //{
+        //    var head = CreateList();
+        //    FlattenList(head);
 
-        }
+        //}
 
         static MultilevelListNode CreateList(int[] arr, int n)
         {
