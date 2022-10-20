@@ -71,19 +71,19 @@ namespace DSA.LinkedList
 
         }
 
-        static void Main(string[] args)
-        {
-            ListNode first = new ListNode(1);
-            first.next = new ListNode(2);
-            first.next.next = new ListNode(3);
-            first.next.next.next = new ListNode(4);
-            first.next.next.next.next = new ListNode(5);
-            first.next.next.next.next.next = new ListNode(6);
-            first.next.next.next.next.next.next = new ListNode(7);
-            first.next.next.next.next.next.next.next = new ListNode(8);
+        //static void Main(string[] args)
+        //{
+        //    ListNode first = new ListNode(1);
+        //    first.next = new ListNode(2);
+        //    first.next.next = new ListNode(3);
+        //    first.next.next.next = new ListNode(4);
+        //    first.next.next.next.next = new ListNode(5);
+        //    first.next.next.next.next.next = new ListNode(6);
+        //    first.next.next.next.next.next.next = new ListNode(7);
+        //    first.next.next.next.next.next.next.next = new ListNode(8);
 
-            var res = PairwiseSwap(first);
+        //    var res = PairwiseSwap(first);
 
-        }
+        //}
     }
 }
